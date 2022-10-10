@@ -4,13 +4,15 @@ import Dashboards from "../Components/DashboardsUserAdmin";
 
 
 
+
 const index =() =>{
     return(
         <>
      
         <Routes>
-            <Route exact path="/" element={<Dashboards/>}></Route>
-            <Route exact path="/Dashboards" element={<Dashboards/>}></Route>
+            <Route exact path="/dashboard" element={<Dashboards/>}></Route>
+            
+        
             
            
            
