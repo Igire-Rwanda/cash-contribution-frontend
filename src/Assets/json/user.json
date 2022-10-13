@@ -1,0 +1,59 @@
+[
+    {  
+      
+        "FirstName":"Mbabazi",
+        "LastName":"Fabiola",
+        "Status":"Active",
+        "Type":"contribution"
+       
+        
+    },
+    {  
+      
+        "FirstName":"Mutesi",
+        "LastName":"Divine",
+        "Status":"Active",
+        "Type":" Contribution"
+        
+        
+    },
+    {  
+        "FirstName":"Byiza",
+        "LastName":"Divine",
+        "Status":"InActive",
+        "Type":"No contribution"
+       
+   },
+   {  
+    "FirstName":"Icyeza",
+    "LastName":"Vava",
+    "Status":"InActive",
+    "Type":"No contribution"
+   
+},
+{  
+    "FirstName":"Karemera",
+    "LastName":"Divine",
+    "Status":"InActive",
+    "Type":" Contribution"
+   
+},
+{  
+    "FirstName":"Uwase",
+    "LastName":"Divine",
+    "Status":"InActive",
+    "Type":"No contribution"
+   
+},
+{  
+    "FirstName":"Dushime",
+    "LastName":"Divine",
+    "Status":"InActive",
+    "Type":"No contribution"
+   
+}
+
+   
+
+]
+
