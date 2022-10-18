@@ -1,27 +1,25 @@
-import  React from "react";
-import{Routes,Route} from 'react-router-dom';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Dashboards from "../Components/DashboardsUserAdmin";
+import PageLayout from "../Components/PageLayout";
+import User from "./../Components/User";
 
-import Table from "../Components/Table";
-
-
-const index =() =>{
-    return(
-        <>
-     
-        <Routes>
-        <Route exact path="/" element={<Table/>}></Route>
-            <Route exact path="/Table" element={<Table/>}></Route>
-            <Route exact path="/dashboard" element={<Dashboards/>}></Route>
-            
-        
-            
-           
-           
-        </Routes>
-        
-        </>
-        
-    )
-}
+const index = () => {
+  return (
+    <>
+      <Routes>
+        <Route exact path="/dashboard" element={<Dashboards />}></Route>
+        <Route
+          exact
+          path="/user"
+          element={
+            <PageLayout>
+              <User />
+            </PageLayout>
+          }
+        ></Route>
+      </Routes>
+    </>
+  );
+};
 export default index;
