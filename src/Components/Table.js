@@ -9,12 +9,16 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import createData from "../Assets/json/user.json";
 import "./table.css";
+// import Cards from "../Components/cards";
 const columns = [
-  { id: 'FirstName', label: 'FirstName', minWidth: 20 },
-  { id: 'LastName', label: 'LastName', minWidth: 20 },
-  { id: 'Status', label: 'Status', minWidth: 20 },
+  { id: 'Date', label: 'Date', minWidth: 20 },
+  { id: 'Names', label: 'Names', minWidth: 20 },
+  { id: 'Amounts', label: 'Amounts', minWidth: 20 },
   { 
-    id: 'Type', label: 'Type', minWidth: 20 },
+id: 'Status', label: 'Status', minWidth: 20 },
+{ id: 'Given', label: 'Given', minWidth: 20 },
+{ id: 'Ramain', label: 'Ramain', minWidth: 20 },
+{ id: 'Balance', label: 'Balance', minWidth: 20 },
 
 ];
 
@@ -39,7 +43,7 @@ export default function StickyHeadTable() {
   };
 
   return (
-    <Paper sx={{ width: '70%', overflow:'hidden',left:'20%',  marginLeft:'8.5rem',marginTop:'5rem'}}>
+    <Paper sx={{ width: '70%', overflow:'hidden',left:'20%',  marginLeft:'14rem',marginTop:'10rem'}}>
       <TableContainer sx={{ maxHeight: 940}}>
         <Table stickyHeader aria-label="sticky table"sx={{fontStyle:'bold'}} >
           <TableHead >

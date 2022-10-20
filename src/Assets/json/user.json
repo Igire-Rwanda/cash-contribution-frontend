@@ -1,59 +1,92 @@
 [
     {  
-      
-        "FirstName":"Mbabazi",
-        "LastName":"Fabiola",
-        "Status":"Active",
-        "Type":"contribution"
+        "Date":"jan 25th, 2022",
+        "Names":"Mbabazi Fabiola",
+        "Amounts":"$2200",
+        "Status":" Is Active",
+        "Given":"$600",
+        "Ramain":"$300",
+        "Balance":"$32325"
        
         
     },
     {  
-      
-        "FirstName":"Mutesi",
-        "LastName":"Divine",
-        "Status":"Active",
-        "Type":" Contribution"
-        
+        "Date":"jan 5th, 2022",
+        "Names":"Byiza Divine",
+        "Amounts":"$1350",
+        "Status":" Is Active",
+        "Given":"$600",
+        "Ramain":"$300",
+        "Balance":"$54490"
+       
         
     },
     {  
-        "FirstName":"Byiza",
-        "LastName":"Divine",
-        "Status":"InActive",
-        "Type":"No contribution"
+        "Date":"jan 25th, 2022",
+        "Names":"Icyeza Vannessa",
+        "Amounts":"$2134",
+        "Status":" Is Active",
+        "Given":"$600",
+        "Ramain":"$300",
+        "Balance":"$17000"
        
-   },
-   {  
-    "FirstName":"Icyeza",
-    "LastName":"Vava",
-    "Status":"InActive",
-    "Type":"No contribution"
-   
-},
-{  
-    "FirstName":"Karemera",
-    "LastName":"Divine",
-    "Status":"InActive",
-    "Type":" Contribution"
-   
-},
-{  
-    "FirstName":"Uwase",
-    "LastName":"Divine",
-    "Status":"InActive",
-    "Type":"No contribution"
-   
-},
-{  
-    "FirstName":"Dushime",
-    "LastName":"Divine",
-    "Status":"InActive",
-    "Type":"No contribution"
-   
-}
-
-   
+        
+    },
+    {  
+        "Date":"  Octomber 6th, 2022",
+        "Names":"Karemera Alice",
+        "Amounts":"$23345",
+        "Status":" Offline",
+        "Given":"$600",
+        "Ramain":"$300",
+        "Balance":"$1400"
+       
+        
+    },
+    {  
+        "Date":"September 9th, 2022",
+        "Names":"Uwase Djanati",
+        "Amounts":"$96544",
+        "Status":" Is Active",
+        "Given":"$600",
+        "Ramain":"$300",
+        "Balance":"$17000"
+       
+        
+    },
+    {  
+        "Date":"jan 1th, 2022",
+        "Names":"Uwase Vyonne",
+        "Amounts":"$12437",
+        "Status":" Offline",
+        "Given":"$600",
+        "Ramain":"$300",
+        "Balance":"$17000"
+       
+        
+    },
+    {  
+        "Date":"july 25th, 2022",
+        "Names":"Imbabazi Fiona",
+        "Amounts":"$52300",
+        "Status":" Disactive",
+        "Given":"$700",
+        "Ramain":"$100",
+        "Balance":"$7000"
+       
+        
+    },
+    {  
+        "Date":"july 2th, 2022",
+        "Names":"Iradukunda  Alice",
+        "Amounts":"$4000",
+        "Status":" Disactive",
+        "Given":"$1200",
+        "Ramain":"$880",
+        "Balance":"$93244"
+       
+        
+    }
 
 ]
 
