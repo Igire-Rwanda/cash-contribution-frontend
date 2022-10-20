@@ -43,7 +43,7 @@ const Dashboards = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, color:'black',fontSize:'1rem' }}>
+           <Typography variant="h6" component="div" sx={{ flexGrow: 1, color:'black',fontSize:'1rem' }}>
           Welcome to C-Cash Dashboard
           </Typography>
           {/* <Button color="inherit" sx={{color:'black'}}>Fabiola</Button> */}
