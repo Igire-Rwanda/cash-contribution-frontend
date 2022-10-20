@@ -35,9 +35,6 @@ export function ContributionsCard() {
           >
             $5000
           </Typography>
-          {/* <Typography sx={{ fontSize: "20px", color: "rgba(0, 0, 0, 0.25)" }}>
-            Updated 1d ago
-          </Typography> */}
         </Box>
 
         <Typography
@@ -50,14 +47,14 @@ export function ContributionsCard() {
             width: "155px",
             height: "186px",
             border: "1px solid blue",
-            postion: "absolute",
+            position: "absolute",
             left: "264px",
             right: "auto",
             top: "82px",
             bottom: "auto",
           }}
         >
-          <MoneyRounded />
+          <MoneyRounded fontSize="large" />
         </Box>
       </CardContent>
     </Card>

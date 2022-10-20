@@ -35,7 +35,13 @@ export default function Account() {
         <TeamTable />
         <ExpenseChart />
       </Box>
-      <Box sx={{ mt: "16px" }}>
+      <Box
+        sx={{
+          mt: "16px",
+          minWidth: "100%",
+          mx: "auto",
+        }}
+      >
         <AccountActivityTable />
       </Box>
     </>

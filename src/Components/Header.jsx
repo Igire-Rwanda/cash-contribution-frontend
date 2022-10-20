@@ -38,7 +38,6 @@ function Header() {
           >
             Welcome to C-Cash Dashboard
           </Typography>
-          {/* <Button color="inherit" sx={{color:'black'}}>Fabiola</Button> */}
           <Avatar
             alt="Fabiola"
             src="https://picsum.photos/200/200"

@@ -11,23 +11,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-// function createData(day, money) {
-//   return { day, money };
-// }
-
-// export function () {
-//   return (
-//     <Box
-//       sx={{
-//         minWidth: "536px",
-//         minHeight: "261px",
-//         background: "green",
-//       }}
-//     >
-//     </Box>
-//   );
-// }
-
 export default class ExpenseChart extends PureComponent {
   createData(day, money) {
     return { name: day, money };

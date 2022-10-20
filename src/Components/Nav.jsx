@@ -1,19 +1,20 @@
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import DraftsIcon from "@mui/icons-material/Drafts";
+import { useState } from "react";
+import List from "@mui/material/List/List";
+import ListItemButton from "@mui/material/ListItemButton/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText/ListItemText";
 import AccountBalance from "@mui/icons-material/AccountBalance";
 import Dashboard from "@mui/icons-material/Dashboard";
 import Money from "@mui/icons-material/Money";
 import FileCopy from "@mui/icons-material/FileCopy";
-import Wallet from "@mui/icons-material/Wallet";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import Settings from "@mui/icons-material/Settings";
 import People from "@mui/icons-material/People";
 
-import "./syle.css";
+// import "./syle.css";
 
 export function Nav() {
+  const [selected, setSelected] = useState(1);
   return (
     <List
       sx={{
@@ -26,44 +27,65 @@ export function Nav() {
       }}
       component="nav"
       aria-labelledby="nested-list-subheader"
-      // subheader={
-      //   <ListSubheader component="div" id="nested-list-subheader">
-      //     Nested List Items
-      //   </ListSubheader>
-      // }
     >
-      <ListItemButton sx={{ color: "white" }}>
+      <ListItemButton
+        sx={{ color: "white" }}
+        selected={selected == 1}
+        onClick={() => setSelected(1)}
+      >
         <ListItemIcon>
           <Dashboard />
         </ListItemIcon>
         <ListItemText primary="Dashboard" />
       </ListItemButton>
-      <ListItemButton sx={{ color: "white" }}>
+      <ListItemButton
+        sx={{ color: "white" }}
+        selected={selected == 2}
+        onClick={() => setSelected(2)}
+      >
         <ListItemIcon>
           <AccountBalance />
         </ListItemIcon>
         <ListItemText primary="Account" />
       </ListItemButton>
 
-      <ListItemButton sx={{ color: "white" }}>
+      <ListItemButton
+        sx={{ color: "white" }}
+        selected={selected == 3}
+        onClick={() => {
+          setSelected(3);
+        }}
+      >
         <ListItemIcon>
-          <Money />
+          <AccountBalanceWalletIcon />
         </ListItemIcon>
         <ListItemText primary="Transactions" />
       </ListItemButton>
-      <ListItemButton sx={{ color: "white" }}>
+      <ListItemButton
+        sx={{ color: "white" }}
+        selected={selected == 4}
+        onClick={() => setSelected(4)}
+      >
         <ListItemIcon>
-          <Wallet />
+          <Money />
         </ListItemIcon>
         <ListItemText primary="Contibutions" />
       </ListItemButton>
-      <ListItemButton sx={{ color: "white" }}>
+      <ListItemButton
+        sx={{ color: "white" }}
+        selected={selected == 5}
+        onClick={() => setSelected(5)}
+      >
         <ListItemIcon>
           <FileCopy />
         </ListItemIcon>
         <ListItemText primary="Documents" />
       </ListItemButton>
-      <ListItemButton sx={{ color: "white" }}>
+      <ListItemButton
+        sx={{ color: "white" }}
+        selected={selected == 6}
+        onClick={() => setSelected(6)}
+      >
         <ListItemIcon>
           <People />
         </ListItemIcon>
@@ -78,6 +100,8 @@ export function Nav() {
           top: "auto",
           position: "absolute",
         }}
+        selected={selected == 7}
+        onClick={() => setSelected(7)}
       >
         <ListItemIcon>
           <Settings />
