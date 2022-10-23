@@ -1,22 +1,26 @@
 import Box from "@mui/material/Box/Box";
-import { ContributionsCard } from "./ContributionsCard";
+import ContributionsCard from "./ContributionsCard";
+import ContributionsTable from "./ContributionsTable";
 
 export default function Contributions() {
   return (
     <>
       <Box
         sx={{
-          display: "grid",
-          height: "275px",
+          display: "flex",
+          height: "210px",
+          width: "95%",
           mt: "24px",
           mx: "auto",
-          gridTemplateColumns: "repeat(3, 454px)",
-          columnGap: "13px",
+          justifyContent: "space-between",
         }}
       >
+        <ContributionsCard style={{ backgroundColor: "purple" }} />
         <ContributionsCard />
         <ContributionsCard />
-        <ContributionsCard />
+      </Box>
+      <Box sx={{ mt: "20px" }}>
+        <ContributionsTable />
       </Box>
     </>
   );

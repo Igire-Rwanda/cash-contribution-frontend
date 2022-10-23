@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import List from "@mui/material/List/List";
 import ListItemButton from "@mui/material/ListItemButton/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon/ListItemIcon";
@@ -10,11 +10,11 @@ import FileCopy from "@mui/icons-material/FileCopy";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import Settings from "@mui/icons-material/Settings";
 import People from "@mui/icons-material/People";
-
-// import "./syle.css";
+import { NbrContext } from "./PageLayout";
 
 export function Nav() {
-  const [selected, setSelected] = useState(1);
+  const { selected, setSelected } = useContext(NbrContext);
+  //const [selected, setSelected] = useState(1);
   return (
     <List
       sx={{

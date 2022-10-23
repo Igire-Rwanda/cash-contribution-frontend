@@ -53,6 +53,8 @@ function createData(date, group, type, amount) {
   return { date, group, type, amount, time };
 }
 
+const tableCellCSS = { padding: "8px" };
+
 const rows = [
   createData(new Date(), "Abahahemuka", "savings", 230500),
   createData("01/01/1998", "Abahahemuka", "savings", 230600),
@@ -100,18 +102,18 @@ export default function ColumnGroupingTable() {
                 pl: "4rem",
               }}
             >
-              <TableCell colSpan={5} sx={{ fontWeight: 700 }}>
+              <TableCell colSpan={5} sx={{ fontWeight: 700, ...tableCellCSS }}>
                 <Typography variant="h6">Recent Activity</Typography>
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={tableCellCSS}>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <Typography variant="h6">Select</Typography>
                   <KeyboardArrowDown />
                 </Box>
               </TableCell>
-              <TableCell align="center" colSpan={1}>
+              <TableCell align="center" colSpan={1} sx={tableCellCSS}>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <Typography variant="h6">2022</Typography>
                   <KeyboardArrowDown />
@@ -124,7 +126,11 @@ export default function ColumnGroupingTable() {
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ top: 57, minWidth: column.minWidth }}
+                  style={{
+                    top: 57,
+                    minWidth: column.minWidth,
+                    ...tableCellCSS,
+                  }}
                 >
                   {column.label}
                 </TableCell>
@@ -145,7 +151,11 @@ export default function ColumnGroupingTable() {
                     {columns.map((column) => {
                       const value = row[column.id];
                       return (
-                        <TableCell key={column.id} align={column.align}>
+                        <TableCell
+                          key={column.id}
+                          align={column.align}
+                          sx={tableCellCSS}
+                        >
                           {column.format && 1 == 1
                             ? column.format(value)
                             : value}

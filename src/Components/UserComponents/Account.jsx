@@ -1,24 +1,22 @@
-"use strict";
-
 import AccountCard from "./AccountCard";
 import AccountActivityTable from "./AccountActivityTable";
 import Box from "@mui/material/Box/Box";
 import TeamTable from "./TeamTable";
 import ExpenseChart from "./ExpenseChart";
 
+const cardsContainer = {
+  width: "95%",
+  display: "flex",
+  justifyContent: "space-between",
+  height: window.innerWidth >= 1336 ? "160px" : "235px",
+  mt: "24px",
+  mx: "auto",
+};
+
 export default function Account() {
   return (
     <>
-      <Box
-        sx={{
-          display: "grid",
-          height: "235px",
-          mt: "24px",
-          mx: "auto",
-          gridTemplateColumns: "repeat(4, 295px)",
-          columnGap: "52px",
-        }}
-      >
+      <Box sx={cardsContainer}>
         <AccountCard />
         <AccountCard />
         <AccountCard />
@@ -29,7 +27,8 @@ export default function Account() {
           mt: "17px",
           mx: "auto",
           display: "flex",
-          alignItems: "space-between",
+          justifyContent: "space-between",
+          width: "95%",
         }}
       >
         <TeamTable />

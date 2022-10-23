@@ -27,8 +27,8 @@ export default class ExpenseChart extends PureComponent {
     return (
       <Box
         sx={{
-          minWidth: "536px",
-          maxHeight: "261px",
+          minWidth: "400px",
+          maxHeight: "200px",
         }}
       >
         <ResponsiveContainer width="100%" height="100%">

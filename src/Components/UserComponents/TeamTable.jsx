@@ -16,9 +16,16 @@ const rows = [
   createData("Team A", "Active", "Kigali", 2713964),
 ];
 
+const tableCellCSS = {
+  fontWeight: 500,
+  fontSize: "16px",
+  color: "rgba(0, 0, 0, 0.25)",
+  padding: "8px",
+};
+
 export default function TeamTable() {
   return (
-    <TableContainer component={Paper} sx={{ width: "740px", mr: "51px" }}>
+    <TableContainer component={Paper} sx={{ width: "600px", mr: "51px" }}>
       <Table>
         <TableHead>
           <TableRow>
@@ -26,7 +33,7 @@ export default function TeamTable() {
               align="center"
               sx={{
                 fontWeight: 500,
-                fontSize: "20px",
+                fontSize: "16px",
                 color: "rgba(0, 0, 0, 0.25)",
               }}
             >
@@ -36,7 +43,7 @@ export default function TeamTable() {
               align="center"
               sx={{
                 fontWeight: 500,
-                fontSize: "20px",
+                fontSize: "16px",
                 color: "rgba(0, 0, 0, 0.25)",
               }}
             >
@@ -46,7 +53,7 @@ export default function TeamTable() {
               align="center"
               sx={{
                 fontWeight: 500,
-                fontSize: "20px",
+                fontSize: "16px",
                 color: "rgba(0, 0, 0, 0.25)",
               }}
             >
@@ -56,7 +63,7 @@ export default function TeamTable() {
               align="center"
               sx={{
                 fontWeight: 500,
-                fontSize: "20px",
+                fontSize: "16px",
                 color: "rgba(0, 0, 0, 0.25)",
               }}
             >
@@ -76,43 +83,18 @@ export default function TeamTable() {
               <TableCell
                 component="th"
                 scope="row"
-                sx={{
-                  fontWeight: 500,
-                  fontSize: "20px",
-                  color: "rgba(0, 0, 0, 0.25)",
-                }}
+                sx={tableCellCSS}
                 align="center"
               >
                 {row.group}
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{
-                  fontWeight: 500,
-                  fontSize: "20px",
-                  color: "rgba(0, 0, 0, 0.25)",
-                }}
-              >
+              <TableCell align="center" sx={tableCellCSS}>
                 {row.status}
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{
-                  fontWeight: 500,
-                  fontSize: "20px",
-                  color: "rgba(0, 0, 0, 0.25)",
-                }}
-              >
+              <TableCell align="center" sx={tableCellCSS}>
                 {row.location}
               </TableCell>
-              <TableCell
-                align="center"
-                sx={{
-                  fontWeight: 500,
-                  fontSize: "20px",
-                  color: "rgba(0, 0, 0, 0.25)",
-                }}
-              >
+              <TableCell align="center" sx={tableCellCSS}>
                 {row.balance}
               </TableCell>
             </TableRow>
