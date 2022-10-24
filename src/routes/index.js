@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Dashboards from "../Components/DashboardsUserAdmin";
 import PageLayout from "../Components/PageLayout";
-import User from "./../Components/User";
+import User from "../Components/User";
 
 const index = () => {
   return (

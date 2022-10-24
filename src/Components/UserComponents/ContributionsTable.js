@@ -8,7 +8,6 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import Typography from "@mui/material/Typography/Typography";
-import KeyboardArrowDown from "@material-ui/icons/KeyboardArrowDown";
 import Box from "@mui/material/Box/Box";
 import TextField from "@mui/material/TextField/TextField";
 import FormControl from "@mui/material/FormControl/FormControl";
@@ -138,7 +137,7 @@ const rows = [
   ),
 ];
 
-export default function TransactionsTable() {
+export default function ContributionsTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 

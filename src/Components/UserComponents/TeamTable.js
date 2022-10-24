@@ -1,10 +1,10 @@
-import Table from "@mui/material/Table";
-import TableHead from "@mui/material/TableHead";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import Table from "@mui/material/Table/Table";
+import TableHead from "@mui/material/TableHead/TableHead";
+import TableBody from "@mui/material/TableBody/TableBody";
+import TableCell from "@mui/material/TableCell/TableCell";
+import TableContainer from "@mui/material/TableContainer/TableContainer";
+import TableRow from "@mui/material/TableRow/TableRow";
+import Paper from "@mui/material/Paper/Paper";
 
 function createData(group, status, location, balance) {
   return { group, status, location, balance };
@@ -12,14 +12,14 @@ function createData(group, status, location, balance) {
 
 const rows = [
   createData("Team A", "Active", "Kigali", 2713924),
-  createData("Team B", "Active", "Kigali", 2743924),
+  createData("Team B", "Inactive", "Kigali", 2743924),
   createData("Team A", "Active", "Kigali", 2713964),
 ];
 
 const tableCellCSS = {
   fontWeight: 500,
   fontSize: "16px",
-  color: "rgba(0, 0, 0, 0.25)",
+  color: "black",
   padding: "8px",
 };
 
@@ -34,7 +34,7 @@ export default function TeamTable() {
               sx={{
                 fontWeight: 500,
                 fontSize: "16px",
-                color: "rgba(0, 0, 0, 0.25)",
+                color: "black",
               }}
             >
               All Groups
@@ -44,7 +44,7 @@ export default function TeamTable() {
               sx={{
                 fontWeight: 500,
                 fontSize: "16px",
-                color: "rgba(0, 0, 0, 0.25)",
+                color: "black",
               }}
             >
               Status
@@ -54,7 +54,7 @@ export default function TeamTable() {
               sx={{
                 fontWeight: 500,
                 fontSize: "16px",
-                color: "rgba(0, 0, 0, 0.25)",
+                color: "black",
               }}
             >
               Location
@@ -64,7 +64,7 @@ export default function TeamTable() {
               sx={{
                 fontWeight: 500,
                 fontSize: "16px",
-                color: "rgba(0, 0, 0, 0.25)",
+                color: "black",
               }}
             >
               Balance
@@ -77,7 +77,7 @@ export default function TeamTable() {
               key={row.balance}
               sx={{
                 "&:last-child td, &:last-child th": { border: 0 },
-                "&:hover": { background: "rgba(217, 217, 217, 0.62)" },
+                "&:hover": {  bgcolor: "#476847" },
               }}
             >
               <TableCell

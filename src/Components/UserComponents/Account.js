@@ -39,6 +39,7 @@ export default function Account() {
           mt: "16px",
           minWidth: "100%",
           mx: "auto",
+        
         }}
       >
         <AccountActivityTable />

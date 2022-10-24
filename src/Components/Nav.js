@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import List from "@mui/material/List/List";
 import ListItemButton from "@mui/material/ListItemButton/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon/ListItemIcon";
@@ -14,7 +14,6 @@ import { NbrContext } from "./PageLayout";
 
 export function Nav() {
   const { selected, setSelected } = useContext(NbrContext);
-  //const [selected, setSelected] = useState(1);
   return (
     <List
       sx={{

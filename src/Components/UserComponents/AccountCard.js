@@ -6,17 +6,21 @@ import Typography from "@mui/material/Typography";
 const cardContent = {
   width: "210px",
   height: "160px",
+  "&:last-child td, &:last-child th": { border: 0 },
+              "&:hover": { bgcolor: "#476847"  },
+ 
 };
 
 export default function AccountCard() {
   return (
-    <Card sx={{ borderRadius: "30px", ...cardContent }}>
+    <Card sx={{ borderRadius: "30px",color: "black", ...cardContent }}>
       <CardContent sx={cardContent}>
         <Typography
           sx={{
             fontSize: "16px",
-            color: "rgba(0, 0, 0, 0.25)",
+            color: "red",
             marginBottom: "15px",
+            
           }}
         >
           Total Money
@@ -29,12 +33,12 @@ export default function AccountCard() {
           >
             $7000M
           </Typography>
-          <Typography sx={{ fontSize: "14px", color: "rgba(0, 0, 0, 0.25)" }}>
+          <Typography sx={{ fontSize: "10px", color: "green" }}>
             Updated 1d ago
           </Typography>
         </Box>
 
-        <Typography sx={{ fontSize: "16px", color: "rgba(0, 0, 0, 0.25)" }}>
+        <Typography sx={{ fontSize: "16px", color: "skyblue" }}>
           + 3.6% than last month
         </Typography>
       </CardContent>

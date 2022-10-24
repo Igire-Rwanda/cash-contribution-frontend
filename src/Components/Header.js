@@ -1,11 +1,11 @@
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
+import AppBar from "@mui/material/AppBar/AppBar";
+import Box from "@mui/material/Box/Box";
+import Toolbar from "@mui/material/Toolbar/Toolbar";
+import Typography from "@mui/material/Typography/Typography";
+import IconButton from "@mui/material/IconButton/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./syle.css";
-import Avatar from "@mui/material/Avatar";
+import Avatar from "@mui/material/Avatar/Avatar";
 
 function Header() {
   return (

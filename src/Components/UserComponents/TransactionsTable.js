@@ -1,14 +1,13 @@
 import * as React from "react";
-import Paper from "@mui/material/Paper";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TablePagination from "@mui/material/TablePagination";
-import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper/Paper";
+import Table from "@mui/material/Table/Table";
+import TableBody from "@mui/material/TableBody/TableBody";
+import TableCell from "@mui/material/TableCell/TableCell";
+import TableContainer from "@mui/material/TableContainer/TableContainer";
+import TableHead from "@mui/material/TableHead/TableHead";
+import TablePagination from "@mui/material/TablePagination/TablePagination";
+import TableRow from "@mui/material/TableRow/TableRow";
 import Typography from "@mui/material/Typography/Typography";
-import KeyboardArrowDown from "@material-ui/icons/KeyboardArrowDown";
 import Box from "@mui/material/Box/Box";
 import TextField from "@mui/material/TextField/TextField";
 import FormControl from "@mui/material/FormControl/FormControl";
@@ -138,7 +137,7 @@ const rows = [
   ),
 ];
 
-export default function ContributionsTable() {
+export default function TransactionsTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -167,7 +166,7 @@ export default function ContributionsTable() {
             >
               <TableCell colSpan={7} sx={{ fontWeight: 700, ...tableCellCSS }}>
                 <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-                  <Typography variant="h6">All Contributions Done</Typography>
+                  <Typography variant="h6">All Transactions Done</Typography>
                   <Box
                     sx={{
                       display: "flex",
