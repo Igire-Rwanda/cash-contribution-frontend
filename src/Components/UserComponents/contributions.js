@@ -15,7 +15,7 @@ export default function Contributions() {
           justifyContent: "space-between",
         }}
       >
-        <ContributionsCard style={{ backgroundColor: "skyblue" }} />
+        <ContributionsCard style={{ backgroundColor: "#476847" }} />
         <ContributionsCard />
         <ContributionsCard />
       </Box>

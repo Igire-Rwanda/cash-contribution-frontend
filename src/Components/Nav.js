@@ -78,7 +78,7 @@ export function Nav() {
         <ListItemIcon>
           <FileCopy />
         </ListItemIcon>
-        <ListItemText primary="Documents" />
+        <ListItemText primary="Contibute" />
       </ListItemButton>
       <ListItemButton
         sx={{ color: "white" }}
