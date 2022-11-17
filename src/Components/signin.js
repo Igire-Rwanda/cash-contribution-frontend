@@ -12,6 +12,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import {useForm} from "react-hook-form";
 
 function Copyright() {
   return (
@@ -58,7 +59,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignInSide() {
+
+  const {register,handleSubmit,
+    formState: {errors},
+  } = useForm();
+
+  const onSubmit = (data)=> console.log(data);
   const classes = useStyles();
+
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -72,7 +80,7 @@ export default function SignInSide() {
           <Typography component="h1" variant="h5" color='darkgreen'>
             Sign in
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} noValidate onSubmit={handleSubmit(onSubmit)} >
             <TextField
               variant="outlined"
               margin="normal"
@@ -83,6 +91,10 @@ export default function SignInSide() {
               name="email"
               autoComplete="email"
               autoFocus
+              {...register("email", { required:"email is required",})}
+              error={!!errors?.email}
+              helperText={errors.email ? errors.email.message: null}
+ 
             />
             <TextField
               variant="outlined"
@@ -94,6 +106,9 @@ export default function SignInSide() {
               type="password"
               id="password"
               autoComplete="current-password"
+              {...register("password", {required:" password is required"})}
+              error={!!errors?.password}
+              helperText={errors.password ? errors.password.message: null}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
