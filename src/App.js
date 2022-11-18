@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import CreateTeam from "./components/CreateTeam";
 import ViewTeams from "./components/ViewTeams";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 
 const App = () => {
@@ -25,10 +26,10 @@ const App = () => {
                     <Route path="/viewteams" element={<ViewTeams />}></Route>
                     {/* <Route path="/register" element={<Register />}></Route>
                     <Route path="/login" element={<Login />}></Route> */}
+                    <Route  path='/signin' element={<Login/>}/>
                 </Routes>
             </div>
         </>
     );
-};
-
+                }
 export default App;
