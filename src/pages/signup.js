@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
+import {useForm} from "react-hook-form";
+
+
 
 const signup = () => {
+  const{register, handleSubmit, formState:{errors}} = useForm();
+  console.log(errors)
   return (
     
          <div
@@ -29,7 +34,9 @@ const signup = () => {
         </div>
 
         <div className="mt-10">
-          <form action="#">
+          <form action="#" onSubmit={handleSubmit(()=>{
+            consol.log();
+          })}>
 
           <div className="flex flex-col mb-5">
               <label
@@ -56,7 +63,7 @@ const signup = () => {
                 <input
                   id="name"
                   type="name"
-                  name="name"
+                  {...register("name", {required:"please enter your full names"})}
                   className="
                     text-sm
                     placeholder-gray-500
@@ -66,10 +73,11 @@ const signup = () => {
                     border border-gray-400
                     w-full
                     py-2
-                    focus:outline-none focus:border-blue-400
+                    focus:outline-none focus:border-green-300
                   "
-                  placeholder="Enter your full-Name" required
+                  placeholder="Enter your full-Name"
                 />
+                <p className='text-red-700'>{errors.name?.message}</p>
               </div>
             </div>
 
@@ -99,7 +107,7 @@ const signup = () => {
                 <input
                   id="contact"
                   type="contact"
-                  name="contact"
+                  {...register("contact", {required:"please enter your contact"})}
                   className="
                     text-sm
                     placeholder-gray-500
@@ -109,10 +117,11 @@ const signup = () => {
                     border border-gray-400
                     w-full
                     py-2
-                    focus:outline-none focus:border-blue-400
+                    focus:outline-none focus:border-green-300
                   "
-                  placeholder="Enter your Contact" required
+                  placeholder="Enter your Contact" 
                 />
+                 <p className='text-red-700'>{errors.name?.message}</p>
               </div>
             </div>
 
@@ -143,7 +152,7 @@ const signup = () => {
                 <input
                   id="email"
                   type="email"
-                  name="email"
+                  {...register("name", {required:"please enter your email"})}
                   className="
                     text-sm
                     placeholder-gray-500
@@ -153,10 +162,11 @@ const signup = () => {
                     border border-gray-400
                     w-full
                     py-2
-                    focus:outline-none focus:border-blue-400
+                    focus:outline-none focus:border-green-300
                   "
-                  placeholder="Enter your email" required
+                  placeholder="Enter your email" 
                 />
+                 <p className='text-red-700'>{errors.name?.message}</p>
               </div>
             </div>
 
@@ -189,7 +199,7 @@ const signup = () => {
                 <input
                   id="password"
                   type="password"
-                  name="password"
+                  {...register("name", {required:"please enter your password", minLength: {value:8, message: "password must be at least 8 characters"}})}
                   className="
                     text-sm
                     placeholder-gray-500
@@ -199,10 +209,11 @@ const signup = () => {
                     border border-gray-400
                     w-full
                     py-2
-                    focus:outline-none focus:border-blue-400
+                    focus:outline-none focus:border-green-300
                   "
-                  placeholder="Enter your password"  required
+                  placeholder="Enter your password"  
                 /> 
+                 <p className='text-red-700'>{errors.name?.message}</p>
               </div>
             </div>
 

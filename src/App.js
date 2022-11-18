@@ -8,6 +8,7 @@ import CreateTeam from "./components/CreateTeam";
 import ViewTeams from "./components/ViewTeams";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Signup from "./pages/signup";
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
                     <Route path="/contact" element={<Contact />}></Route>
                     <Route path="/addteam" element={<CreateTeam />}></Route>
                     <Route path="/viewteams" element={<ViewTeams />}></Route>
+                    <Route path="/signup" element={<Signup/>}/>
                     {/* <Route path="/register" element={<Register />}></Route>
                     <Route path="/login" element={<Login />}></Route> */}
                     <Route  path='/signin' element={<Login/>}/>
