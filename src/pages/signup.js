@@ -121,7 +121,7 @@ const signup = () => {
                   "
                   placeholder="Enter your Contact" 
                 />
-                 <p className='text-red-700'>{errors.name?.message}</p>
+                 <p className='text-red-700'>{errors.contact?.message}</p>
               </div>
             </div>
 
@@ -152,7 +152,7 @@ const signup = () => {
                 <input
                   id="email"
                   type="email"
-                  {...register("name", {required:"please enter your email"})}
+                  {...register("email", {required:"please enter your email"})}
                   className="
                     text-sm
                     placeholder-gray-500
@@ -166,7 +166,7 @@ const signup = () => {
                   "
                   placeholder="Enter your email" 
                 />
-                 <p className='text-red-700'>{errors.name?.message}</p>
+                 <p className='text-red-700'>{errors.email?.message}</p>
               </div>
             </div>
 
@@ -199,7 +199,7 @@ const signup = () => {
                 <input
                   id="password"
                   type="password"
-                  {...register("name", {required:"please enter your password", minLength: {value:8, message: "password must be at least 8 characters"}})}
+                  {...register("password", {required:"please enter your password", minLength: {value:8, message: "password must be at least 8 characters"}})}
                   className="
                     text-sm
                     placeholder-gray-500
@@ -213,7 +213,7 @@ const signup = () => {
                   "
                   placeholder="Enter your password"  
                 /> 
-                 <p className='text-red-700'>{errors.name?.message}</p>
+                 <p className='text-red-700'>{errors.password?.message}</p>
               </div>
             </div>
 
