@@ -1,10 +1,13 @@
 import React from 'react'
+import GetSarted from '../components/GetStarted'
+import HeloSection from '../components/HeloSection'
 
 const Home = () => {
   return (
-    <div>
-        <h1 className='text-teal-500'>CASH CONTRIBUTION</h1>
-    </div>
+    <>
+      <HeloSection />
+      <GetSarted />
+    </>
   )
 }
 
