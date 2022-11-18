@@ -11,8 +11,8 @@ function Nav() {
                 <Link to='/about' className=''>About</Link>
                 <Link to='/viewteams' className=''>View Teams</Link>
                 <Link to='/contact' className=''>Contact</Link>
-                <Link to='/' className=''><button className='rounded-full border-solid border-2 border-x-emerald-900 p-2 ml-[200px] w-[120px]'>Sign Up</button></Link>
-                <Link to='/' className=''><button className='rounded-full border-solid border-2 border-x-emerald-900 p-2 ml-1 w-[120px]'>Sign in</button></Link>
+                <Link to='/signup' className=''><button className='rounded-full border-solid border-2 border-x-emerald-900 p-2 ml-[200px] w-[120px]'>Sign Up</button></Link>
+                <Link to='/signin' className=''><button className='rounded-full border-solid border-2 border-x-emerald-900 p-2 ml-1 w-[120px]'>Sign in</button></Link>
             </ul>
         </div>
     </>

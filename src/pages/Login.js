@@ -183,7 +183,7 @@ function Login() {
             <span className="ml-2"
             >You don't have an account?
               <a
-                href="#"
+                href="signup"
                 className="text-xs ml-2 text-blue-500 font-semibold"
               >Sign Up here</a
               ></span
