@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 
 
 
-const signup = () => {
+const Signup = () => {
   const{register, handleSubmit, formState:{errors}} = useForm();
   console.log(errors)
   return (
@@ -35,7 +35,7 @@ const signup = () => {
 
         <div className="mt-10">
           <form action="#" onSubmit={handleSubmit(()=>{
-            consol.log();
+           
           })}>
 
           <div className="flex flex-col mb-5">
@@ -286,4 +286,4 @@ const signup = () => {
   )
 }
 
-export default signup;
+export default Signup;
