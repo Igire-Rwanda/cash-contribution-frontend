@@ -9,6 +9,7 @@ import ViewTeams from "./components/ViewTeams";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/signup";
+import Dashboard from "./pages/Dashboard";
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
                     {/* <Route path="/register" element={<Register />}></Route>
                     <Route path="/login" element={<Login />}></Route> */}
                     <Route  path='/signin' element={<Login/>}/>
+                    <Route path="/dashboard" element={<Dashboard/>}/>
                 </Routes>
             </div>
         </>
