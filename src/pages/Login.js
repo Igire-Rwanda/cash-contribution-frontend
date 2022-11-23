@@ -14,6 +14,7 @@ function Login() {
 
   const [loading,setLoading]= useState(false)
  const navigate =useNavigate();
+ const [data, setData] = useState([]);
 
   return (
     <>
@@ -46,10 +47,14 @@ function Login() {
                     console.log(data);
                     try {
                       setLoading(true)
-                    await axios.post("http://localhost:4040/user/login",data);
+                    const response = await axios.post("http://localhost:4040/user/login",data);
+                    
                     toast.success("Logged In successfully");
                      setLoading(false);
-                     navigate("/dashboard")
+                     console.log(response.data.data)
+                     localStorage.setItem('token', JSON.stringify(response.data.data.token));
+                    
+                    //  navigate("/dashboard")
                     } catch (error) {
                       setLoading(false)
                       toast.error(error.response.data.error)
