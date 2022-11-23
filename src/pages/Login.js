@@ -1,11 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {useNavigate} from 'react-router-dom'
+
+
+
 
 function Login() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  console.log(errors)
+  const [loading,setLoading]= useState(false)
+ const navigate =useNavigate();
+
   return (
     <>
 
@@ -33,13 +42,24 @@ function Login() {
 
 
           <div className="mt-10">
-            <form action='#' onSubmit={handleSubmit(() => {
-
+            <form action='#' onSubmit={handleSubmit(async(data) => {
+                    console.log(data);
+                    try {
+                      setLoading(true)
+                    await axios.post("http://localhost:4040/user/login",data);
+                    toast.success("Logged In successfully");
+                     setLoading(false);
+                     navigate("/dashboard")
+                    } catch (error) {
+                      setLoading(false)
+                      toast.error(error.response.data.error)
+                    }
+                    // await axios.post("http://localhost:4040/user/login",data);
             })}>
 
               <div className="flex flex-col mb-5">
                 <label
-                  for="email"
+                  htmlFor="email"
                   className="mb-1 text-xs tracking-wide text-gray-600"
                 >E-Mail Address:</label
                 >
@@ -76,13 +96,14 @@ function Login() {
                     focus:outline-none focus:border-green-300
                   "
                     placeholder="Enter your email"
+                    
                   />
-                  <p className='text-red-700'> {errors.email?.message}</p>
+                  <p className='text-red-700 text-xs'> {errors.email?.message}</p>
                 </div>
               </div>
               <div className="flex flex-col mb-6">
                 <label
-                  for="password"
+                  htmlFor="password"
                   className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
                 >Password:</label
                 >
@@ -122,13 +143,14 @@ function Login() {
                   "
                     placeholder="Enter your password"
                   />
-                  <p className='text-red-700'> {errors.password?.message} </p>
+                  <p className='text-red-700 text-xs'> {errors.password?.message} </p>
                 </div>
               </div>
 
               <div className="flex w-full">
                 <button
                   type="submit"
+                 
                   className="
                   flex
                   mt-2
@@ -137,8 +159,8 @@ function Login() {
                   focus:outline-none
                   text-white text-sm
                   sm:text-base
-                  bg-green-800
-                  hover:bg-green-500
+                  bg-emerald-900
+                  hover:bg-green-800
                   rounded-2xl
                   py-2
                   w-full
@@ -146,7 +168,14 @@ function Login() {
                   duration-150
                   ease-in
                 "
+                
                 >
+
+                {loading && ( <>               
+                 <div className="grid-1 my-auto h-5 w-5 mx-3 border-t-transparent border-solid animate-spin rounded-full border-white border-4 "></div>            
+                 <div className="grid-2 my-auto -mx-1"> </div>                
+                 
+                 </>)}
                   <span className="mr-2 uppercase">Login</span>
                   <span>
                     <svg
@@ -164,11 +193,10 @@ function Login() {
                     </svg>
                   </span>
                 </button>
+                <ToastContainer/>
               </div>
             </form>
-          </div>
-        </div>
-        <div className="flex justify-center items-center mt-6">
+            <div className="flex justify-center items-center mt-6">
           <a
             href="#"
             target="_blank"
@@ -190,6 +218,9 @@ function Login() {
             >
           </a>
         </div>
+          </div>
+        </div>
+        
       </div>
 
 
