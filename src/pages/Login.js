@@ -1,8 +1,10 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {useNavigate} from 'react-router-dom'
+
 
 
 
@@ -10,8 +12,8 @@ function Login() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  
- 
+  const [loading,setLoading]= useState(false)
+ const navigate =useNavigate();
 
   return (
     <>
@@ -43,13 +45,16 @@ function Login() {
             <form action='#' onSubmit={handleSubmit(async(data) => {
                     console.log(data);
                     try {
+                      setLoading(true)
                     await axios.post("http://localhost:4040/user/login",data);
                     toast.success("Logged In successfully");
-
+                     setLoading(false);
+                     navigate("/dashboard")
                     } catch (error) {
+                      setLoading(false)
                       toast.error(error.response.data.error)
                     }
-                    await axios.post("http://localhost:4040/user/login",data);
+                    // await axios.post("http://localhost:4040/user/login",data);
             })}>
 
               <div className="flex flex-col mb-5">
@@ -165,6 +170,12 @@ function Login() {
                 "
                 
                 >
+
+                {loading && ( <>               
+                 <div className="grid-1 my-auto h-5 w-5 mx-3 border-t-transparent border-solid animate-spin rounded-full border-white border-4 "></div>            
+                 <div className="grid-2 my-auto -mx-1"> </div>                
+                 
+                 </>)}
                   <span className="mr-2 uppercase">Login</span>
                   <span>
                     <svg
@@ -185,9 +196,7 @@ function Login() {
                 <ToastContainer/>
               </div>
             </form>
-          </div>
-        </div>
-        <div className="flex justify-center items-center mt-6">
+            <div className="flex justify-center items-center mt-6">
           <a
             href="#"
             target="_blank"
@@ -209,6 +218,9 @@ function Login() {
             >
           </a>
         </div>
+          </div>
+        </div>
+        
       </div>
 
 
