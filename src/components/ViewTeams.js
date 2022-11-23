@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function ViewTeams() {
   return (
     <div>
-      VIEW TEAMS
+      <Link to="/dashboard" className=''>ViewTeams</Link>
     </div>
   )
 }

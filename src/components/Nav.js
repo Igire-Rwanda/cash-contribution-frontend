@@ -9,7 +9,7 @@ function Nav() {
             <ul className='space-x-12 ml-60'>
                 <Link to='/' className=''>Home</Link>
                 <Link to='/about' className=''>About</Link>
-                <Link to='/viewteams' className=''>View Teams</Link>
+                <Link to='/dashboard' className=''>View Teams</Link>
                 <Link to='/contact' className=''>Contact</Link>
                 <Link to='/signup' className=''><button className='rounded-full border-solid border-2 border-x-emerald-900 p-2 ml-[200px] w-[120px]'>Sign Up</button></Link>
                 <Link to='/signin' className=''><button className='rounded-full border-solid border-2 border-x-emerald-900 p-2 ml-1 w-[120px]'>Sign in</button></Link>
