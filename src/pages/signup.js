@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useForm} from "react-hook-form";
+import axios from "axios";
+import {ToastContainer,toast} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Signup = () => {
+
+  
   const{register, handleSubmit, formState:{errors}} = useForm();
-  console.log(errors)
+  const [loading, setLoading] = useState(false)
+  const navigate = useNavigate();
   return (
     
          <div
@@ -34,8 +41,18 @@ const Signup = () => {
         </div>
 
         <div className="mt-10">
-          <form action="#" onSubmit={handleSubmit(()=>{
-           
+          <form action="#" onSubmit={handleSubmit(async(data)=>{
+           try {
+            setLoading(true)
+            await axios.post("http://localhost:4040/user",data);
+            toast.success("Account created successfully")
+            setLoading(false)
+            navigate("/signin")
+           } catch (err) {
+            setLoading(false)
+            toast.error(err.response.data.error)
+           }
+         
           })}>
 
           <div className="flex flex-col mb-5">
@@ -77,7 +94,7 @@ const Signup = () => {
                   "
                   placeholder="Enter your full-Name"
                 />
-                <p className='text-red-700'>{errors.name?.message}</p>
+                <p className='text-red-700 text-xs'>{errors.name?.message}</p>
               </div>
             </div>
 
@@ -121,7 +138,7 @@ const Signup = () => {
                   "
                   placeholder="Enter your Contact" 
                 />
-                 <p className='text-red-700'>{errors.name?.message}</p>
+                 <p className='text-red-700 text-xs'>{errors.contact?.message}</p>
               </div>
             </div>
 
@@ -152,7 +169,7 @@ const Signup = () => {
                 <input
                   id="email"
                   type="email"
-                  {...register("name", {required:"please enter your email"})}
+                  {...register("email", {required:"please enter your email"})}
                   className="
                     text-sm
                     placeholder-gray-500
@@ -166,7 +183,7 @@ const Signup = () => {
                   "
                   placeholder="Enter your email" 
                 />
-                 <p className='text-red-700'>{errors.name?.message}</p>
+                 <p className='text-red-700 text-xs'>{errors.email?.message}</p>
               </div>
             </div>
 
@@ -199,7 +216,7 @@ const Signup = () => {
                 <input
                   id="password"
                   type="password"
-                  {...register("name", {required:"please enter your password", minLength: {value:8, message: "password must be at least 8 characters"}})}
+                  {...register("password", {required:"please enter your password", minLength: {value:8, message: "password must be at least 8 characters"}})}
                   className="
                     text-sm
                     placeholder-gray-500
@@ -213,7 +230,7 @@ const Signup = () => {
                   "
                   placeholder="Enter your password"  
                 /> 
-                 <p className='text-red-700'>{errors.name?.message}</p>
+                 <p className='text-red-700 text-xs'>{errors.password?.message}</p>
               </div>
             </div>
 
@@ -236,9 +253,17 @@ const Signup = () => {
                   transition
                   duration-150
                   ease-in
+                 
                 "
+
+                // iyo ushaka gukoresha if idafite else ($$())
               >
-                <span className="mr-2 uppercase">Sign Up</span>
+              {loading && ( <>
+               <div className="grid-1 my-auto h-5 w-5 mx-3 border-t-transparent border-solid animate-spin rounded-full border-white border-4 "></div>
+                <div className="grid-2 my-auto -mx-1"> </div>
+               </>)}
+              
+                <span className="mr-2 uppercase " >Sign Up</span>
                 <span>
                   <svg
                     className="h-6 w-6"
@@ -254,7 +279,9 @@ const Signup = () => {
                     />
                   </svg>
                 </span>
+              
               </button>
+              <ToastContainer />
             </div>
           </form>
         </div>
