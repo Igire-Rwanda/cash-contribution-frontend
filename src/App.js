@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/signup";
 
 
+
 const App = () => {
     return (
 
@@ -29,6 +30,7 @@ const App = () => {
                     {/* <Route path="/register" element={<Register />}></Route>
                     <Route path="/login" element={<Login />}></Route> */}
                     <Route  path='/signin' element={<Login/>}/>
+        
                 </Routes>
             </div>
         </>
