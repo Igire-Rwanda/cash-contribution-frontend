@@ -1,11 +1,18 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 function Login() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  console.log(errors)
+  
+ 
+
   return (
     <>
 
@@ -33,13 +40,21 @@ function Login() {
 
 
           <div className="mt-10">
-            <form action='#' onSubmit={handleSubmit(() => {
+            <form action='#' onSubmit={handleSubmit(async(data) => {
+                    console.log(data);
+                    try {
+                    await axios.post("http://localhost:4040/user/login",data);
+                    toast.success("Logged In successfully");
 
+                    } catch (error) {
+                      toast.error(error.response.data.error)
+                    }
+                    await axios.post("http://localhost:4040/user/login",data);
             })}>
 
               <div className="flex flex-col mb-5">
                 <label
-                  for="email"
+                  htmlFor="email"
                   className="mb-1 text-xs tracking-wide text-gray-600"
                 >E-Mail Address:</label
                 >
@@ -76,13 +91,14 @@ function Login() {
                     focus:outline-none focus:border-green-300
                   "
                     placeholder="Enter your email"
+                    
                   />
-                  <p className='text-red-700'> {errors.email?.message}</p>
+                  <p className='text-red-700 text-xs'> {errors.email?.message}</p>
                 </div>
               </div>
               <div className="flex flex-col mb-6">
                 <label
-                  for="password"
+                  htmlFor="password"
                   className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
                 >Password:</label
                 >
@@ -122,13 +138,14 @@ function Login() {
                   "
                     placeholder="Enter your password"
                   />
-                  <p className='text-red-700'> {errors.password?.message} </p>
+                  <p className='text-red-700 text-xs'> {errors.password?.message} </p>
                 </div>
               </div>
 
               <div className="flex w-full">
                 <button
                   type="submit"
+                 
                   className="
                   flex
                   mt-2
@@ -137,8 +154,8 @@ function Login() {
                   focus:outline-none
                   text-white text-sm
                   sm:text-base
-                  bg-green-800
-                  hover:bg-green-500
+                  bg-emerald-900
+                  hover:bg-green-800
                   rounded-2xl
                   py-2
                   w-full
@@ -146,6 +163,7 @@ function Login() {
                   duration-150
                   ease-in
                 "
+                
                 >
                   <span className="mr-2 uppercase">Login</span>
                   <span>
@@ -164,6 +182,7 @@ function Login() {
                     </svg>
                   </span>
                 </button>
+                <ToastContainer/>
               </div>
             </form>
           </div>

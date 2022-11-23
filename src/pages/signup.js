@@ -245,8 +245,8 @@ const Signup = () => {
                   focus:outline-none
                   text-white text-sm
                   sm:text-base
-                  bg-green-800
-                  hover:bg-green-500
+                  bg-emerald-900
+                  hover:bg-green-800
                   rounded-2xl
                   py-2
                   w-full
