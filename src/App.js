@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/signup";
 import Dashboard from "./pages/Dashboard";
+import TeamMembers from "./components/TeamMembers";
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
                     <Route path="/login" element={<Login />}></Route> */}
                     <Route  path='/signin' element={<Login/>}/>
                     <Route path="/dashboard" element={<Dashboard/>}/>
+                    <Route path="/teammembers" element={<TeamMembers/>}/>
                 </Routes>
             </div>
         </>
