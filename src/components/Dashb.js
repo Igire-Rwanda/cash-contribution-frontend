@@ -76,8 +76,8 @@ function Dashb() {
         <div className='float-left w-screen  '>
 
           <div className='border-solid border-2 border-b-gray-100  '>
-          <div className='pl-[1250px] pt-4'>
-            <div className='relative'>
+          <div className='pl-[1300px] pt-4'>
+            <div className='relative mb-[10px]'>
               <img 
               className='h-[40px] w-[40px] object-cover border-2 border-emerald-900 rounded-full cursor-pointer' 
               src={user} alt="user"
@@ -88,13 +88,13 @@ function Dashb() {
                 open &&(
                 <div
                 ref={menuRef} 
-                className='bg-white shadow-lg p-4 w-52 absolute -left-14 top-24'
+                className='bg-white shadow-lg p-4 w-40 absolute -left-14 top-24'
                 >
                   <ul>
                     {
                       Menus.map((menu) => (
                         <li 
-                          className='p-2 text-lg cursor-pointer rounded hover:bg-blue-100'
+                          className='p-2 text-sm cursor-pointer rounded hover:bg-blue-100'
                           key={menu}
                           onClick={() => setOpen(false)}
                           >

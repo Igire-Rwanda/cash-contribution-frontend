@@ -6,7 +6,7 @@ function Team() {
     
         
         <div>
-            <h1 className='ml-[400px]'>Welcome to team Page</h1>
+            <h1 className='ml-[400px] pt-[4%]'>Welcome to team Page</h1>
         </div>
     </>
   )
