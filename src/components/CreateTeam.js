@@ -18,7 +18,7 @@ function CreateTeam() {
                             <div className=' bg-white p-16 rounded-2xl drop-shadow-xl'>
                                 <p className=''>Add your Team</p>
 
-                                <form className=' pt-[20px]' action='#' onSubmit={handleSubmit(() => {
+                                <form className=' pt-[20px] ' action='#' onSubmit={handleSubmit(() => {
 
                                 })}>
 
