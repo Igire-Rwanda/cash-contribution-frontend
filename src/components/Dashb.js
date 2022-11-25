@@ -76,10 +76,10 @@ function Dashb() {
         <div className='float-left w-screen  '>
 
           <div className='border-solid border-2 border-b-gray-100  '>
-          <div className='pl-[1300px] pt-4'>
+          <div className='pl-[1300px] pt-[20px]'>
             <div className='relative mb-[10px]'>
               <img 
-              className='h-[40px] w-[40px] object-cover border-2 border-emerald-900 rounded-full cursor-pointer' 
+              className='h-[20px] w-[20px] object-cover border-2 border-emerald-900 rounded-full cursor-pointer' 
               src={user} alt="user"
               onClick={()=>setOpen(!open)}
               ref={imgRef}
