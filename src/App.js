@@ -10,29 +10,39 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/signup";
 import Dashboard from "./pages/Dashboard";
+import ProtectedRoutes from "./ProtectedRoutes";
 
 
 
 const App = () => {
+
+    const [isLoggedIn, setisLoggedIn] = useState(null);
+
     return (
 
         <>
 
+
+
             <div className=''>
                 <Nav />
+            
 
+              
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/contact" element={<Contact />}></Route>
                     <Route path="/addteam" element={<CreateTeam />}></Route>
-                    <Route path="/viewteams" element={<ViewTeams />}></Route>
+                    {/* <Route path="/viewteams" element={<ViewTeams />}></Route> */}
                     <Route path="/signup" element={<Signup/>}/>
-                    {/* <Route path="/register" element={<Register />}></Route>
-                    <Route path="/login" element={<Login />}></Route> */}
                     <Route  path='/signin' element={<Login/>}/>
-                    <Route path="/dashboard" element={<Dashboard/>}/>
-                </Routes>
+                    {/* <Route  path='/dashboard' element={<Dashboard/>}/> */}
+                    
+                    <Route path="/dashboard"element={<ProtectedRoutes isLoggedIn={isLoggedIn}>
+                    <Dashboard />
+                    </ProtectedRoutes>}/>
+                    </Routes>
             </div>
         </>
     );

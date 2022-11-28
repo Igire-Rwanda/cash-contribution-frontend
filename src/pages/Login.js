@@ -9,6 +9,13 @@ import {useNavigate} from 'react-router-dom'
 
 
 function Login() {
+//   const [isLoggedIn, setisLoggedIn] = useState(null);
+// const logIn = () => {
+// setisLoggedIn(true);
+// };
+// const logOut = () => {
+//     setisLoggedIn(false);
+//     };
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -18,6 +25,8 @@ function Login() {
 
   return (
     <>
+
+
 
       <div
         className="min-h-screen flex flex-col items-center justify-center bg-gray-100"
@@ -54,12 +63,12 @@ function Login() {
                      console.log(response.data.data)
                      localStorage.setItem('token', JSON.stringify(response.data.data.token));
                     
-                    //  navigate("/dashboard")
+                     navigate("/dashboard")
                     } catch (error) {
                       setLoading(false)
                       toast.error(error.response.data.error)
                     }
-                    // await axios.post("http://localhost:4040/user/login",data);
+                    
             })}>
 
               <div className="flex flex-col mb-5">
