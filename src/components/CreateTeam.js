@@ -47,9 +47,12 @@ function CreateTeam() {
                                     <p className='text-red-700'>{errors.TeamName?.message}</p>
 
                                     <p className=''>Settings</p>
-                                    <input id="wallet" defaultValue={"MINUTE"} type="TEXT" {...register("settings", {required: 'please enter email'})} className=" border-solid border-2 border-emerald-90 w-full py-2 px-3 rounded focus:outline my-3"></input>
-                                    <p className='text-red-700'>{errors.SETTINGS?.message}</p>
 
+                                    <select   {...register("settings", {required: 'please enter email'}) } className=" border-solid border-2 border-emerald-90 w-full py-2 px-3 rounded focus:outline my-3">
+                                            <option>MINUTE</option> <option>Two minutes</option> <option>Hour</option><option>Month</option> <option>Everyday</option>
+                                    </select>
+                                    
+                                   
                                     <p className=''>Description</p>
                                     <input id="description" type="description" {...register("description", {required: 'please enter email'})} className=" border-solid border-2 border-emerald-90 w-full py-2 px-3 rounded focus:outline my-3"></input>
                                     <p className='text-red-700'>{errors.description?.message}</p>
