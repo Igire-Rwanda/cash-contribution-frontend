@@ -52,14 +52,14 @@ function Login() {
                     toast.success("Logged In successfully");
                      setLoading(false);
                      console.log(response.data.data)
-                     localStorage.setItem('token', JSON.stringify(response.data.data.token));
+                     localStorage.setItem('token', response.data.data.token);
                     
-                    //  navigate("/dashboard")
+                     navigate("/teams")
                     } catch (error) {
                       setLoading(false)
                       toast.error(error.response.data.error)
                     }
-                    // await axios.post("http://localhost:4040/user/login",data);
+                
             })}>
 
               <div className="flex flex-col mb-5">

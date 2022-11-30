@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import React, { useRef, useState,useEffect } from 'react'
+import { Link, Outlet,useNavigate } from 'react-router-dom'
 import user from "../imgs/profile.jpg";
 
 function Dashb() {
@@ -16,6 +16,16 @@ function Dashb() {
     }
   });
 
+  const [isLoggedIn,setIsLoggedIn] = useState(false);
+    const navigate = useNavigate();
+  useEffect(()=>{
+      const token = localStorage.getItem("token");
+      if(token){
+        setIsLoggedIn(true);
+      }else{
+        navigate("/signin")
+      }
+  },[]);
   return (
     <>
 
