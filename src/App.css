@@ -6,3 +6,9 @@
   ul{
     font-weight: 100;
   }
+
+  .body{
+    background-image: url(../src/imgs/hh.webp);
+    background-size: cover;
+    height: 80vh;
+  }
