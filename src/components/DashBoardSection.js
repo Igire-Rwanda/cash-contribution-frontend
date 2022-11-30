@@ -31,13 +31,9 @@ function DashBoardSection() {
             <p className="text-sm pl-[4px]">2,100,000</p>
           </div>
 
-          <div className=''>
-          <button className='border-none bg-emerald-900 w-[80px] rounded-full text-center p-[3px] text-white text-sm mt-[90px]'>Explore</button>
         </div>
 
-        </div>
-
-        <div className='w-[21%] h-[20vh] bg-gray-50 border-none shadow-2xl rounded-2xl grid gap-x-8 grid-cols-4 ml-[3%]'>
+        {/* <div className='w-[21%] h-[20vh] bg-gray-50 border-none shadow-2xl rounded-2xl grid gap-x-8 grid-cols-4 ml-[3%]'>
           <h1 className='pl-8 pt-4 flex'>
 
             <div className=''>
@@ -56,11 +52,7 @@ function DashBoardSection() {
             <p className="text-sm pl-[4px]">2,100,000</p>
           </div>
 
-          <div>
-          <button className='border-none bg-emerald-900 w-[80px] rounded-full text-center p-[3px] text-white text-sm mt-[90px]'>Explore</button>
-        </div>
-
-        </div>
+        </div> */}
 
         <div className='w-[21%] h-[20vh] bg-gray-50 border-none shadow-2xl rounded-2xl grid gap-x-8 grid-cols-4 ml-[3%]'>
           <h1 className='pl-8 pt-4 flex'>
@@ -83,13 +75,9 @@ function DashBoardSection() {
             <p className="text-sm pl-[4px]">2,100,000</p>
           </div>
 
-          <div>
-          <button className='border-none bg-emerald-900 w-[80px] rounded-full text-center p-[3px] text-white text-sm mt-[90px]'>Explore</button>
         </div>
 
-        </div>
-
-        <div className='w-[22%] h-[20vh] bg-gray-50 border-none shadow-2xl rounded-2xl grid gap-x-8 grid-cols-4 ml-[3%]'>
+        {/* <div className='w-[22%] h-[20vh] bg-gray-50 border-none shadow-2xl rounded-2xl grid gap-x-8 grid-cols-4 ml-[3%]'>
           <h1 className='pl-8 pt-4 flex'>
 
             <div className=''>
@@ -110,11 +98,7 @@ function DashBoardSection() {
             <p className="text-sm pl-[8px]">2,100,000</p>
           </div>
 
-          <div>
-          <button className='border-none bg-emerald-900 w-[80px] rounded-full text-center p-[3px] text-sm text-white mt-[90px]'>Explore</button>
-        </div>
-
-        </div>
+        </div> */}
 
       </div>
     </>
