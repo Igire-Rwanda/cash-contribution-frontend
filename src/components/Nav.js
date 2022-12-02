@@ -1,15 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../imgs/Logo.png'
+import { useEffect, useState } from "react";
 
 function Nav() {
-  return (
+  
+
+ return (
     <>
-        <div className='flex py-[10px] mt-[15px]'>
+        <div className='shadow-md flex   bg-emerald-20 p-2 mt-0 fixed top-0 z-50 w-full z-10 top-0'>
             <div className='pl-[70px] text-emerald-900 '>
               <img src={logo} alt="logo"  className='w-[50px] h-[50px]'/>
             </div>
-            <ul className='space-x-12 ml-60 text-sm'>
+            <ul className='space-x-12 ml-60 text-sm '>
                 <Link to='/' className=''>Home</Link>
                 <Link to='/about' className=''>About</Link>
                 <Link to='/contact' className=''>Contact</Link>
