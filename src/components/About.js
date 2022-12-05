@@ -3,10 +3,16 @@ import React from 'react'
 function About() {
   return (
     <>
-        <div>
-          <h1 className='text-center mt-80 text-3xl font-thin'>About Us</h1>
-          <p className='text-center mx-[20%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi massa arcu, semper nec dolor sit amet, accumsan molestie velit. Donec posuere metus erat, quis sodales mi dignissim sed. Sed auctor elit nec lectus accumsan, nec maximus justo auctor. Suspendisse potenti. Cras fringilla porta ex. Morbi et pharetra quam, sit amet tempus ante. Nunc ut erat in eros dictum sodales.</p>
-        </div>
+      <div className=' text-black mx-[6%] h-[50vh]  '>
+        <h1 className='text-center mt-60 text-3xl font-thin p-2 pt-8'>About Us</h1>
+        <p className='text-center mx-[20%] p-4 leading-loose'>
+          e-BIKA is a website that will be helping group of people or organization in their
+          money contribution. in different sectors
+          As we all know poverty is one of the first goals in SDGS (sustainable development goals)
+          around the world so we came up with the idea of making a website that will help small groups or
+          organizations to contribute their money by online way, wherever they are.
+        </p>
+      </div>
     </>
   )
 }

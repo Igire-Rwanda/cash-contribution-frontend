@@ -8,13 +8,13 @@ function Objectives() {
   return (
     <>
 
-<h1 className='text-center mt-44 text-3xl font-thin'>Objectives</h1>
+<h1 className='text-center pt-[6%] text-3xl font-thin'>Objectives</h1>
 
 
-<section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-white">
+<section class="pt-2 lg:pt-[60px] pb-10 lg:pb-20 bg-white">
     
    <div class="container ml-14 ">
-      <div class="flex flex-wrap -mx-4 " >
+      <div class="flex flex-wrap mx-8 " >
          <div class="w-full md:w-1/2 xl:w-1/3 px-4 ">
             <div class="bg-white rounded-xl overflow-hidden mb-10 ">
                <img
