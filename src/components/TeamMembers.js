@@ -7,13 +7,20 @@ const TeamMembers = () => {
 
 
   const [Members, setMembers] = useState([])
+  const [team, setTeamId] = useState(null)
+
   const getMembers = async (data) => {
-    const response = await axios.get("http://localhost:4040/team/6387229da6cf953faf5eeffb", data)
+    const response = await axios.get(`http://localhost:4040/team/${team}`, data);
     console.log(response.data.data)
     setMembers(response.data);
   }
   useEffect(() => {
-    getMembers();
+    const teamId = localStorage.getItem("team");
+    if(teamId){
+      setTeamId(teamId)
+      getMembers();
+    }
+
   }, [])
 
 

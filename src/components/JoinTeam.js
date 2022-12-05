@@ -26,7 +26,7 @@ function JoinTeam() {
 
             <div className='mt-8'>
               <h1>are you sure you want to join Team ?</h1>
-              {/* <span className='text-gray-200'>{params.id} </span>  */}
+              <span className='text-gray-200'>{params.id} </span> 
             </div>
 
           </h1>
