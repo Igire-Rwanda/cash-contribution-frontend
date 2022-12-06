@@ -132,7 +132,9 @@ function Dashb() {
           </div>
           </div>
 
+          <div className='ml-[50px]'>
           <Outlet />
+          </div>
         </div>
 
       </div>
