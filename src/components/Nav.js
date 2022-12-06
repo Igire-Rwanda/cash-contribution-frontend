@@ -14,7 +14,7 @@ function Nav() {
             </div>
             <ul className='space-x-12 ml-60 text-sm '>
                 <Link to='/' className=''>Home</Link>
-                <Link to='/about' className=''>About</Link>
+                <Link to='//about' className=''>About</Link>
                 <Link to='/about' className=''>How it works</Link>
                 <Link to='/about' className=''>Objectives</Link>
                 <Link to='/contact' className=''>Contact</Link>

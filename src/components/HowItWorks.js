@@ -3,7 +3,7 @@ import React from 'react'
 function HowItWorks() {
     return (
         <>
-            <div className='mt-[4%]'>
+            <div className='mt-[2%]'>
                 <div className=' pb-8'>
                     <h1 className='text-center text-2xl'>How It Works!</h1>
                 </div>

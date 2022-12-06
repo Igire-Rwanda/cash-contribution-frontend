@@ -40,7 +40,7 @@ const App = () => {
                     <Route path="/dashboard" element={<Dashb />}>
                             <Route path='' element={<DashBoardSection />} />
                             <Route path="teammembers" element={<TeamMembers/>}/>
-                            <Route path="jointeam" element={<JoinTeam />}/>
+                            <Route path="jointeam/:id" element={<JoinTeam />}/>
                          <Route path='team' element={<Team />} />
                          <Route path='transactions' element={<Transactions />} />
                          <Route path='settings' element={<Settings />} />
