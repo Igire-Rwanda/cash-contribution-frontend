@@ -14,6 +14,8 @@ import Transactions from "./components/Transactions";
 import Dashb from "./components/Dashb";
 import Settings from "./components/Settings";
 import Dashboard from "./pages/Dashboard";
+import TeamMembers from "./components/TeamMembers";
+import JoinTeam from "./components/JoinTeam";
 
 const App = () => {
     return (
@@ -28,11 +30,17 @@ const App = () => {
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/contact" element={<Contact />}></Route>
                     <Route path="/addteam" element={<CreateTeam />}></Route>
+                    <Route path="/viewteams" element={<ViewTeams />}></Route>
+                    <Route path="/signup" element={<Signup/>}/>
+                    {/* <Route path="/register" element={<Register />}></Route>
+                    <Route path="/login" element={<Login />}></Route> */}
+                    <Route  path='/signin' element={<Login/>}/>
                     <Route path="/signup" element={<Signup />} />
-                    <Route path='/signin' element={<Login />} />
                     <Route path="/teams" element={<Dashboard/>}/>
                     <Route path="/dashboard" element={<Dashb />}>
                             <Route path='' element={<DashBoardSection />} />
+                            <Route path="teammembers" element={<TeamMembers/>}/>
+                            <Route path="jointeam/:id" element={<JoinTeam />}/>
                          <Route path='team' element={<Team />} />
                          <Route path='transactions' element={<Transactions />} />
                          <Route path='settings' element={<Settings />} />
