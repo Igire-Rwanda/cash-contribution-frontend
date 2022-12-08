@@ -4,17 +4,14 @@ import axios from 'axios';
 import { Link, Navigate } from 'react-router-dom'
  import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
-  import{useNavigate}from 'react-router-dom'
 
 
 
 function CreateTeam() {
 
     const {register, handleSubmit, formState: {errors} } = useForm();
-    console.log(errors)
-    const [loading, setLoading] = useState (false)
-    const navigate = useNavigate();
 
+    const [loading, setLoading] = useState (false)
     return (
         <div>
             <>
@@ -26,34 +23,45 @@ function CreateTeam() {
                                 <p className=''>Add your Team</p>
 
                                 <form className=' pt-[20px] ' action='#' onSubmit={handleSubmit(async(data) => {
-                                    console.log(data);
+                                    const token = localStorage.getItem("token");
 
                                     try {
                                         setLoading(true)
-                                    const response = await axios.post("http://localhost:4040/team",data);
+                                      
+                                    const response = await axios.post("http://localhost:4040/team",data,{
+                                        headers: {
+                                            Authorization: token
+                                          }
+                                    });
+                                   
                                     toast.success("team added successfully!")
                                     setLoading(false);
                                     console.log(response.data.data)
-                                    Navigate("/teams")
                                     } catch (error) {
                                         setLoading(false)
                                         toast.error(error.response.data.error)
                                     }
-
+                                    
+                                
                                 })}>
+                                    
 
-                                    <p className=''>Name</p>
+                                    <p className=''>Name:</p>
                                     <input id= "name" type="name" {...register("TeamName", {required: 'please enter name'})} className=" border-solid border-2 border-emerald-90 w-full py-2 px-3 rounded focus:outline my-3"></input>
                                     <p className='text-red-700'>{errors.TeamName?.message}</p>
 
-                                    <p className=''>Settings</p>
+                                    <p className=''>Settings:</p>
 
                                     <select   {...register("settings", {required: 'please enter email'}) } className=" border-solid border-2 border-emerald-90 w-full py-2 px-3 rounded focus:outline my-3">
                                             <option>MINUTE</option> <option>Two minutes</option> <option>Hour</option><option>Month</option> <option>Everyday</option>
                                     </select>
                                     
                                    
-                                    <p className=''>Description</p>
+                                    <p className=''>Amount:</p>
+                                    <input id="amount" type="amount" {...register("amount", {required: 'please enter email'})} className=" border-solid border-2 border-emerald-90 w-full py-2 px-3 rounded focus:outline my-3"></input>
+                                    <p className='text-red-700'>{errors.amount?.message}</p>
+
+                                    <p className=''>Description:</p>
                                     <input id="description" type="description" {...register("description", {required: 'please enter email'})} className=" border-solid border-2 border-emerald-90 w-full py-2 px-3 rounded focus:outline my-3"></input>
                                     <p className='text-red-700'>{errors.description?.message}</p>
 
