@@ -10,7 +10,6 @@ function Contribution() {
 
     const getPayment = async (teamId) => {
       const response = await axios.get(`http://localhost:4040/team/contributions/${teamId}`);
-      console.log(response.data)
       setPayment(response.data);
     }
     useEffect(() => {
@@ -77,7 +76,7 @@ function Contribution() {
                                             <div className="text-left">2020-11-30</div>
                                         </td>
                                         <td className="p-2 whitespace-nowrap">
-                                            <div className="text-left font-medium text-gray-800">
+                                            <div className={`text-left font-medium ${payment.status=='success'? 'text-green-500' :'text-yellow-500'}`}>
                                             {payment.status}
                                             </div>
                                         </td>
