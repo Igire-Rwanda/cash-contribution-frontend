@@ -1,19 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 // import { RWebShare } from "react-web-share";
+import axios from "axios"
+
 
 function JoinTeam() {
 
   const [teamId, setTeamId] = useState("");
+  const[token,setToken] = useState(null);
 
   const params = useParams();
   useEffect(() => {
-
-
     setTeamId(localStorage.getItem("team"));
+    setToken(localStorage.getItem("token"))
   }, [])
 
-  console.log(params)
+
+
+    const confirmJoining=()=>{
+      axios.get("http://localhost:4040/team/join/"+teamId,{
+        headers:{
+          Authorization:token
+        }
+      })
+    }
+
 
   return (
     <>
@@ -39,7 +50,7 @@ function JoinTeam() {
             </div>
 
           <div className='flex mt-8 ml-[170px] w-40 grid gap-[20px] grid-cols-2'>
-            <button className='p-2 text-emerald-900 border-solid border-2 border-emerald-900  rounded-md '>Yes</button>
+            <button className='p-2 text-emerald-900 border-solid border-2 border-emerald-900  rounded-md ' onClick={confirmJoining}>Yes</button>
             <button className='p-2 text-emerald-900 border-solid border-2 border-emerald-900  rounded-md '>No</button>
           </div>
 
