@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import axios from "axios";
 
 function PaymentResult() {
 
     const paymentResult = new URLSearchParams(window.location.search);
-    const ref = paymentResult.get('tx_ref')
+    const ref = paymentResult.get('tx_ref');
+
+
+
+    const updatePayment= async()=>{
+       await  axios.put("http://localhost:4040/team/contributions/"+ref);
+    }
+
+    useEffect(()=>{
+            updatePayment();
+    },[ref]);
 
 
     return (
