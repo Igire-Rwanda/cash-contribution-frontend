@@ -1,4 +1,4 @@
-import React, {useState}from 'react'
+import React, {useEffect, useState}from 'react'
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Link, Navigate } from 'react-router-dom'
@@ -8,12 +8,14 @@ import { Link, Navigate } from 'react-router-dom'
 
 
 
-function CreateTeam() {
+function CreateTeam(tkn) {
 
     const {register, handleSubmit, formState: {errors} } = useForm();
     console.log(errors)
     const [loading, setLoading] = useState (false)
     const navigate = useNavigate();
+
+    const [token, setToken] = useState(null);
 
     return (
         <div>
@@ -30,10 +32,16 @@ function CreateTeam() {
 
                                     try {
                                         setLoading(true)
-                                    const response = await axios.post("http://localhost:4040/team",data);
+                                    const response = await axios.post("http://localhost:4040/team",{
+                                        Headers:{
+                                            authorization: token || tkn
+                                        }
+                                    },data);
                                     toast.success("team added successfully!")
                                     setLoading(false);
                                     console.log(response.data.data)
+
+                                  
                                     Navigate("/teams")
                                     } catch (error) {
                                         setLoading(false)
@@ -41,6 +49,7 @@ function CreateTeam() {
                                     }
 
                                 })}>
+                                  
 
                                     <p className=''>Name</p>
                                     <input id= "name" type="name" {...register("TeamName", {required: 'please enter name'})} className=" border-solid border-2 border-emerald-90 w-full py-2 px-3 rounded focus:outline my-3"></input>

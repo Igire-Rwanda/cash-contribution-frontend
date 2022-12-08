@@ -1,14 +1,32 @@
 import React, { useRef, useState,useEffect } from 'react'
 import { Link, Outlet,useNavigate } from 'react-router-dom'
-import user from "../imgs/profile.jpg";
+import user from "../imgs/user.png";
 
 function Dashb() {
   const [open, setOpen] = useState(false);
   const Menus = ['profile', 'settings', 'Logout'];
+  const navigate = useNavigate();
 
+  // const Logout = (e)=>{
+  //   e.preventDefault();
+  //   console.log('Logout');
+
+  //   localStorage.clear();
+  //   sessionStorage.clear();
+
+  //   navigate("/");
+  // }
   //solution
   const menuRef = useRef();
   const imgRef = useRef();
+
+
+  const handleMenu=(menu)=>{
+    if(menu=='Logout'){
+      localStorage.clear();
+      navigate("/");
+    }
+  }
 
   window.addEventListener('click', (e)=>{
     if(e.target !== menuRef.current && e.target !== imgRef.current){
@@ -17,7 +35,7 @@ function Dashb() {
   });
 
   const [isLoggedIn,setIsLoggedIn] = useState(false);
-    const navigate = useNavigate();
+
   useEffect(()=>{
       const token = localStorage.getItem("token");
       if(token){
@@ -101,7 +119,7 @@ function Dashb() {
           <div className='pl-[1300px] pt-[20px]'>
             <div className='relative mb-[10px]'>
               <img 
-              className='h-[20px] w-[20px] object-cover border-2 border-emerald-900 rounded-full cursor-pointer' 
+              className='h-[30px] w-[30px] object-cover  cursor-pointer' 
               src={user} alt="user"
               onClick={()=>setOpen(!open)}
               ref={imgRef}
@@ -118,7 +136,7 @@ function Dashb() {
                         <li 
                           className='p-2 text-sm cursor-pointer rounded hover:bg-blue-100'
                           key={menu}
-                          onClick={() => setOpen(false)}
+                          onClick={() => handleMenu(menu)}
                           >
                             {menu}
                           </li>
