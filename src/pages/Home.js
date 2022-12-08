@@ -1,5 +1,6 @@
 import React from 'react'
 import About from '../components/About'
+import Footer from '../components/Footer'
 // import About from '../components/About'
 import GetSarted from '../components/GetStarted'
 import HeloSection from '../components/HeloSection'
@@ -17,6 +18,7 @@ const Home = () => {
       <About/>
       <HowItWorks />
       <Objectives/>
+      <Footer/>
       
       {/* <About /> */}
     </>
