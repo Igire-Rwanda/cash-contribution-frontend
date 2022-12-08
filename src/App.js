@@ -15,6 +15,7 @@ import Dashb from "./components/Dashb";
 import Settings from "./components/Settings";
 import Dashboard from "./pages/Dashboard";
 import TeamMembers from "./components/TeamMembers";
+import Footer from "./components/Footer";
 import JoinTeam from "./components/JoinTeam";
 import Contribution from "./components/Contribution";
 import PaymentResult from "./components/PaymentResult";
@@ -33,6 +34,7 @@ const App = () => {
                     <Route path="/contact" element={<Contact />}></Route>
                     <Route path="/addteam" element={<CreateTeam />}></Route>
                     <Route path="/viewteams" element={<ViewTeams />}></Route>
+                    <Route path="/footer" element={<Footer/>}></Route>
                     <Route path="/signup" element={<Signup/>}/>
                     {/* <Route path="/register" element={<Register />}></Route>
                     <Route path="/login" element={<Login />}></Route> */}

@@ -20,7 +20,7 @@ function CreateTeam() {
 
                         <div className=" max-w-md mx-auto">
                             <div className=' bg-white p-16 rounded-2xl drop-shadow-xl'>
-                                <p className=''>Add your Team</p>
+                                <p className=''>Add Team</p>
 
                                 <form className=' pt-[20px] ' action='#' onSubmit={handleSubmit(async(data) => {
                                     const token = localStorage.getItem("token");
