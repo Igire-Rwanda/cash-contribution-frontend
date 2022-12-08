@@ -16,6 +16,8 @@ import Settings from "./components/Settings";
 import Dashboard from "./pages/Dashboard";
 import TeamMembers from "./components/TeamMembers";
 import JoinTeam from "./components/JoinTeam";
+import Contribution from "./components/Contribution";
+import PaymentResult from "./components/PaymentResult";
 
 const App = () => {
     return (
@@ -36,14 +38,16 @@ const App = () => {
                     <Route path="/login" element={<Login />}></Route> */}
                     <Route  path='/signin' element={<Login/>}/>
                     <Route path="/signup" element={<Signup />} />
-                    <Route path="/teams" element={<Dashboard/>}/>
+                    <Route path="/teams" element={<Dashboard />}/>
                     <Route path="/dashboard" element={<Dashb />}>
                             <Route path='' element={<DashBoardSection />} />
                             <Route path="teammembers" element={<TeamMembers/>}/>
+                            <Route path="contribution" element={<Contribution/>}/>
                             <Route path="jointeam/:id" element={<JoinTeam />}/>
                          <Route path='team' element={<Team />} />
                          <Route path='transactions' element={<Transactions />} />
                          <Route path='settings' element={<Settings />} />
+                         <Route path="paymentresult" element={<PaymentResult />} />
                          
                     </Route>
                     
