@@ -98,7 +98,7 @@ function Contribution() {
                                                     <input type="hidden" name="customer[email]" value="ishedouce.123@gmail.com" />
                                                     <button
                                                         type="submit"
-                                                        class="border ml-[60px] w-[50%] border-emerald-900 bg-emerald-900 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:border-emerald-900 hover:bg-white hover:text-teal-600 focus:outline-none focus:shadow-outline"
+                                                        class="border ml-[80px] w-[60%] border-emerald-900 bg-emerald-900 text-white rounded-md  py-2  transition duration-500 ease select-none hover:border-emerald-900 hover:bg-white hover:text-teal-600 focus:outline-none focus:shadow-outline"
                                                     >
                                                         Pay
                                                     </button>
