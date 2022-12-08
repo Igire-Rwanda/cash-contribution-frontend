@@ -1,236 +1,111 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+// import axios from "axios";
+import React from "react";
+// import { useState, useEffect } from "react";
+// import { RWebShare } from "react-web-share";
 
 function Contribution() {
+
+    // const [Members, setMembers] = useState([])
+    // const [team, setTeamId] = useState(null)
+  
+    // const getMembers = async (teamId) => {
+    //   const response = await axios.get(`http://localhost:4040/team/${teamId}`);
+    //   console.log(response.data.data)
+    //   setMembers(response.data);
+    // }
+    // useEffect(() => {
+    //   const teamId = localStorage.getItem("team");
+    //   if (teamId) {
+    //     setTeamId(teamId)
+    //     getMembers(teamId);
+    //   }
+  
+    // }, [])
+  
+  
+
     return (
         <>
-            <div>
-                <h1>hello</h1>
-            </div>
-            <div>
-                <section class="relative py-16 bg-blueGray-50">
-                    <div class="w-full mb-12 px-4">
-                        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded bg-pink-900 text-white">
-                            <div class="rounded-t mb-0 px-4 py-3 border-0">
-                                <div class="flex flex-wrap items-center">
-                                    <div class="relative w-full px-4 max-w-full flex-grow flex-1 ">
-                                        <h3 class="font-semibold text-lg text-white">Card Tables</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block w-full overflow-x-auto ">
-                                <table class="items-center w-full bg-transparent border-collapse">
-                                    <thead>
-                                        <tr>
-                                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-pink-800 text-pink-300 border-pink-700">Project</th>
-                                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-pink-800 text-pink-300 border-pink-700">Budget</th>
-                                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-pink-800 text-pink-300 border-pink-700">Status</th>
-                                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-pink-800 text-pink-300 border-pink-700">Users</th>
-                                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-pink-800 text-pink-300 border-pink-700">Completion </th>
-                                            <th class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-pink-800 text-pink-300 border-pink-700"></th>
-                                        </tr>
-                                    </thead>
 
-                                    <tbody>
-                                        <tr>
-                                            <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                                                <img src="https://demos.creative-tim.com/notus-js/assets/img/bootstrap.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />
-                                                <span class="ml-3 font-bold text-white"> Argon Design System </span></th>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">$2,500 USD</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <i class="fas fa-circle text-orange-500 mr-2"></i>pending</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <div class="flex">
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-1-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-3-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-4-470x470.png" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"><div class="flex items-center">
-                                                <span class="mr-2">60%</span>
-                                                <div class="relative w-full">
-                                                    <div class="overflow-hidden h-2 text-xs flex rounded bg-red-200">
-                                                        <div style="width: 60%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                                                <a href="#pablo" class="text-blueGray-500 block py-1 px-3" onclick="openDropdown(event,'table-dark-1-dropdown')">
-                                                    <i class="fas fa-ellipsis-v"></i></a>
-                                                <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48" id="table-dark-1-dropdown">
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Something else here</a>
-                                                    <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Seprated Link</a>
-                                                </div>
-                                            </td>
-                                        </tr>
+<div className="h-full mx-[17%] mt-[2%] mx-auto">
 
-                                        <tr>
-                                            <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                                                <img src="https://demos.creative-tim.com/notus-js/assets/img/angular.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />
-                                                <span class="ml-3 font-bold text-white">Angular Now UI Kit PRO </span></th>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">$1,800 USD</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <i class="fas fa-circle text-emerald-500 mr-2"></i>completed</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <div class="flex">
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-1-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-3-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-4-470x470.png" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <div class="flex items-center">
-                                                    <span class="mr-2">100%</span>
-                                                    <div class="relative w-full">
-                                                        <div class="overflow-hidden h-2 text-xs flex rounded bg-emerald-500">
-                                                            <div style="width: 30%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                                                <a href="#pablo" class="text-blueGray-500 block py-1 px-3" onclick="openDropdown(event,'table-dark-1-dropdown')">
-                                                    <i class="fas fa-ellipsis-v"></i></a>
-                                                <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48" id="table-dark-1-dropdown">
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Something else here</a>
-                                                    <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Seprated Link</a>
-                                                </div>
-                                            </td>
-                                        </tr>
+<div className="w-full mx-auto bg-white shadow-lg rounded-sm border border-gray-200 mt-2">
+  <header className="flex px-5 py-4 border-b border-gray-100">
+    <h2 className="font-semibold text-gray-800">Team Contributions</h2>
 
-                                        <tr>
-                                            <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                                                <img src="https://demos.creative-tim.com/notus-js/assets/img/sketch.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />
-                                                <span class="ml-3 font-bold text-white">Black Dashboard Sketch
-                                                </span></th>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">$3,150 USD</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <i class="fas fa-circle text-orange-500 mr-2"></i>delayed</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <div class="flex">
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-1-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-3-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-4-470x470.png" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <div class="flex items-center">
-                                                    <span class="mr-2">73%</span>
-                                                    <div class="relative w-full">
-                                                        <div class="overflow-hidden h-2 text-xs flex rounded bg-red-200">
-                                                            <div style="width: 73%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                                                <a href="#pablo" class="text-blueGray-500 block py-1 px-3" onclick="openDropdown(event,'table-dark-1-dropdown')">
-                                                    <i class="fas fa-ellipsis-v"></i></a>
-                                                <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48" id="table-dark-1-dropdown">
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Something else here</a>
-                                                    <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Seprated Link</a>
-                                                </div>
-                                            </td>
-                                        </tr>
+  </header>
+  <div className="p-3">
+    <div className="overflow-x-auto">
+      <table className="table-auto w-full">
+        <thead className="text-xs font-semibold uppercase text-gray-400 bg-gray-50">
+          <tr>
+            <th className="flex space-x  p-2 whitespace-nowrap">
+              <div className="hover:text-gray-800 hover:text-sm px-8 font-semibold text-left">
+                Names
+              </div>
+            </th>
+            <th className="p-2 whitespace-nowrap">
+              <div className="hover:text-gray-800 hover:text-sm font-semibold text-left">Amount</div>
+            </th>
+            <th className="p-2 whitespace-nowrap">
+              <div className="hover:text-gray-800 hover:text-sm font-semibold text-left">Date</div>
+            </th>
+            <th className="p-2 whitespace-nowrap">
+              <div className="hover:text-gray-800 hover:text-sm font-semibold text-left">status</div>
+            </th>
+            <th className="p-2 whitespace-nowrap">
+              <div className="hover:text-gray-800 hover:text-sm font-semibold text-center">Action</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody className="text-sm divide-y divide-gray-100 ">
 
-                                        <tr>
-                                            <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                                                <img src="https://demos.creative-tim.com/notus-js/assets/img/react.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />
-                                                <span class="ml-3 font-bold text-white">React Material Dashboard
-                                                </span></th>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">$4,400 USD</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <i class="fas fa-circle text-teal-500 mr-2"></i>on schedule</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <div class="flex">
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-1-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-3-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-4-470x470.png" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <div class="flex items-center">
-                                                    <span class="mr-2">90%</span>
-                                                    <div class="relative w-full">
-                                                        <div class="overflow-hidden h-2 text-xs flex rounded bg-teal-200">
-                                                            <div style="width: 90%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-teal-500"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                                                <a href="#pablo" class="text-blueGray-500 block py-1 px-3" onclick="openDropdown(event,'table-dark-1-dropdown')">
-                                                    <i class="fas fa-ellipsis-v"></i></a>
-                                                <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48" id="table-dark-1-dropdown">
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Something else here</a>
-                                                    <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Seprated Link</a>
-                                                </div>
-                                            </td>
-                                        </tr>
 
-                                        <tr>
-                                            <th class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
-                                                <img src="https://demos.creative-tim.com/notus-js/assets/img/vue.jpg" class="h-12 w-12 bg-white rounded-full border" alt="..." />
-                                                <span class="ml-3 font-bold text-white">Vue Material Dashboard
-                                                </span></th>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">$2,200USD</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <i class="fas fa-circle text-emerald-500 mr-2"></i>completed</td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <div class="flex">
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-1-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-2-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-3-800x800.jpg" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                    <img src="https://demos.creative-tim.com/notus-js/assets/img/team-4-470x470.png" alt="..." class="w-10 h-10 rounded-full border-2 border-blueGray-50 shadow -ml-4" />
-                                                </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                                <div class="flex items-center">
-                                                    <span class="mr-2">100%</span>
-                                                    <div class="relative w-full">
-                                                        <div class="overflow-hidden h-2 text-xs flex rounded bg-emerald-200">
-                                                            <div style="width: 100%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-emerald-500"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-                                                <a href="#pablo" class="text-blueGray-500 block py-1 px-3" onclick="openDropdown(event,'table-dark-1-dropdown')">
-                                                    <i class="fas fa-ellipsis-v"></i></a>
-                                                <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48" id="table-dark-1-dropdown">
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Something else here</a>
-                                                    <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                                                    <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Seprated Link</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <footer class="relative pt-8 pb-6 mt-8">
-                        <div class="container mx-auto px-4">
-                            <div class="flex flex-wrap items-center md:justify-between justify-center">
-                                <div class="w-full md:w-6/12 px-4 mx-auto text-center">
-                                    <div class="text-sm text-blueGray-500 font-semibold py-1">
-                                        Made with <a href="https://www.creative-tim.com/product/notus-js" class="text-blueGray-500 hover:text-gray-800" target="_blank">Notus JS</a> by <a href="https://www.creative-tim.com" class="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Creative Tim</a>.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                </section>
-            </div>
+          {/* {Members.map((member) => ( */}
+            <tr>
+              <td className="p-2 pl-[40px] whitespace-nowrap">
+                <div className="flex items-center">
+
+                  <div className="text-lg font-medium text-gray-800">
+                    names
+                  </div>
+                </div>
+              </td>
+
+
+              <td className="p-2 whitespace-nowrap">
+                <div className="text-left">dgdsgz</div>
+              </td>
+              <td className="p-2 whitespace-nowrap">
+                <div className="text-left">hjhjhhhj</div>
+              </td>
+              <td className="p-2 whitespace-nowrap">
+                <div className="text-left font-medium text-gray-800">
+                  25000rfw
+                </div>
+              </td>
+              <td className="p-2 whitespace-nowrap">
+                <div className="flex text-center mx-auto">
+                  <button
+                    type="button"
+                    class="border ml-[60px] w-[50%] border-emerald-900 bg-emerald-900 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:border-emerald-900 hover:bg-white hover:text-teal-600 focus:outline-none focus:shadow-outline"
+                  >
+                    Pay
+                  </button>
+
+                </div>
+              </td>
+            </tr>
+          {/* ))} */}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
         </>
     )
 }
