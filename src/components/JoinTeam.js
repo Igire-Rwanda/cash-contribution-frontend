@@ -11,7 +11,7 @@ function JoinTeam() {
 
   const params = useParams();
   useEffect(() => {
-    setTeamId(localStorage.getItem("team"));
+    setTeamId(params.id);
     setToken(localStorage.getItem("token"))
   }, [])
 
